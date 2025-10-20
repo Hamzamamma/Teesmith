@@ -1,0 +1,66 @@
+/* ==========================================
+   CASE STUDIES SECTION
+   ========================================== */
+
+.case-studies {
+    padding: var(--spacing-xxl) 0;
+    background-color: var(--color-white);
+}
+
+.case-studies-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: var(--spacing-md);
+    background-color: var(--color-dark);
+    border-radius: var(--radius-lg);
+    padding: var(--spacing-lg);
+}
+
+.case-study-card {
+    background-color: var(--color-dark);
+    color: var(--color-white);
+    padding: var(--spacing-lg);
+    border-right: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+.case-study-card:last-child {
+    border-right: none;
+}
+
+.case-study-text {
+    font-size: 1.125rem;
+    line-height: 1.6;
+    margin-bottom: var(--spacing-md);
+}
+
+.case-study-link {
+    color: var(--color-primary);
+    font-size: 1.125rem;
+    transition: gap var(--transition-normal);
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.case-study-link:hover {
+    gap: 1rem;
+}
+
+/* ==========================================
+   RESPONSIVE DESIGN
+   ========================================== */
+
+@media (max-width: 1024px) {
+    .case-studies-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .case-study-card {
+        border-right: none;
+        border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+    }
+
+    .case-study-card:last-child {
+        border-bottom: none;
+    }
+}

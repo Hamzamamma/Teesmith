@@ -1,0 +1,115 @@
+/* ==========================================
+   TEAM SECTION
+   ========================================== */
+
+.team {
+    padding: var(--spacing-xxl) 0;
+    background-color: var(--color-white);
+}
+
+.team-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: var(--spacing-lg);
+    margin-bottom: var(--spacing-lg);
+}
+
+.team-card {
+    border: 2px solid var(--color-border);
+    border-radius: var(--radius-lg);
+    padding: var(--spacing-lg);
+    transition: all var(--transition-normal);
+}
+
+.team-card:hover {
+    transform: translateY(-8px);
+    box-shadow: var(--shadow-lg);
+    background-color: var(--color-light);
+}
+
+.team-member {
+    display: flex;
+    align-items: flex-start;
+    gap: var(--spacing-md);
+    margin-bottom: var(--spacing-md);
+    padding-bottom: var(--spacing-md);
+    border-bottom: 2px solid var(--color-dark);
+    position: relative;
+}
+
+.member-photo {
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    background: linear-gradient(135deg, var(--color-primary), #9FE856);
+    flex-shrink: 0;
+    overflow: hidden;
+    position: relative;
+}
+
+.member-photo img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform var(--transition-normal);
+}
+
+.team-card:hover .member-photo img {
+    transform: scale(1.1);
+}
+
+.member-info {
+    flex: 1;
+}
+
+.member-name {
+    font-size: 1.25rem;
+    font-weight: 500;
+    margin-bottom: 0.25rem;
+}
+
+.member-role {
+    font-size: 1rem;
+    color: var(--color-gray);
+}
+
+.member-linkedin {
+    width: 2rem;
+    height: 2rem;
+    background-color: var(--color-dark);
+    color: var(--color-white);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: 600;
+    transition: all var(--transition-normal);
+}
+
+.member-linkedin:hover {
+    background-color: var(--color-primary);
+    color: var(--color-dark);
+    transform: scale(1.1);
+}
+
+.member-bio {
+    font-size: 1rem;
+    line-height: 1.6;
+    color: var(--color-dark);
+}
+
+/* ==========================================
+   RESPONSIVE DESIGN
+   ========================================== */
+
+@media (max-width: 1024px) {
+    .team-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 768px) {
+    .team-grid {
+        grid-template-columns: 1fr;
+    }
+}
