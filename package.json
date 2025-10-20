@@ -1,0 +1,19 @@
+{
+  "name": "positivus-homepage",
+  "version": "1.0.0",
+  "description": "Modern and performant homepage for Positivus, a digital marketing agency",
+  "type": "module",
+  "main": "index.html",
+  "scripts": {
+    "dev": "npx serve"
+  },
+  "devDependencies": {},
+  "keywords": [
+    "positivus",
+    "homepage",
+    "marketing",
+    "digital"
+  ],
+  "author": "",
+  "license": "ISC"
+}
