@@ -1,0 +1,104 @@
+/* ==========================================
+   WORKING PROCESS SECTION
+   ========================================== */
+
+.working-process {
+    padding: var(--spacing-xxl) 0;
+}
+
+.process-list {
+    display: flex;
+    flex-direction: column;
+    gap: var(--spacing-md);
+}
+
+.process-item {
+    background-color: var(--color-light);
+    border: 2px solid var(--color-border);
+    border-radius: var(--radius-lg);
+    overflow: hidden;
+    transition: all var(--transition-normal);
+}
+
+.process-item.active,
+.process-item:hover {
+    background-color: var(--color-primary);
+}
+
+.process-header {
+    display: flex;
+    align-items: center;
+    gap: var(--spacing-md);
+    padding: var(--spacing-lg);
+    cursor: pointer;
+}
+
+.process-number {
+    font-size: 3.75rem;
+    font-weight: 600;
+    line-height: 1;
+}
+
+.process-title {
+    flex: 1;
+    font-size: 1.875rem;
+    font-weight: 500;
+}
+
+.process-toggle {
+    width: 3.5rem;
+    height: 3.5rem;
+    border-radius: 50%;
+    background-color: var(--color-light);
+    border: 2px solid var(--color-dark);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all var(--transition-normal);
+}
+
+.process-item.active .process-toggle {
+    background-color: var(--color-dark);
+    color: var(--color-white);
+    transform: rotate(45deg);
+}
+
+.toggle-icon {
+    font-size: 2rem;
+    font-weight: 300;
+}
+
+.process-content {
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height var(--transition-slow);
+}
+
+.process-item.active .process-content {
+    max-height: 200px;
+    padding: 0 var(--spacing-lg) var(--spacing-lg);
+}
+
+.process-content p {
+    font-size: 1.125rem;
+    line-height: 1.6;
+    padding-left: 6rem;
+}
+
+/* ==========================================
+   RESPONSIVE DESIGN
+   ========================================== */
+
+@media (max-width: 768px) {
+    .process-content p {
+        padding-left: 0;
+    }
+
+    .process-number {
+        font-size: 2.5rem;
+    }
+
+    .process-title {
+        font-size: 1.25rem;
+    }
+}
